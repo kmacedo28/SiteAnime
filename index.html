@@ -79,7 +79,7 @@
                         <div class="col-lg-6">
                             <div class="hero__text">
                                 <div class="info label">Aventura</div>
-                                <h2 class="info">Fate / Stay Night: Unlimited Blade Works</h2>
+                                <h2 class="info" id="meutexto">Fate / Stay Night: Unlimited Blade Works</h2>
                                 <p class="info">Depois de 30 dias atravessando o mundo... </p>
                                 <a onclick="detalhes(this)" href="anime-details.html"><span>Assista Agora</span> <i
                                         class="fa fa-angle-right"></i></a>
@@ -338,6 +338,28 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
+    <input id="meutexto2" type="text" value="SENAI">
+    <button onclick="msg()">APERTA AQUI</button>
+,   <button onclick="salvar()">SALVAR</button>
+    <button onclick="ler()">LER</button>
+ 
+    <script type="text/javascript">
+        function msg() {
+            let meutexto = document.getElementById("meutexto").innerHTML;
+            document.getElementById("meutexto").innerHTML = "NOVO TEXTO";
+            alert(meutexto);
+            document.getElementById("meutexto2").value = "NOVO TEXTO";
+            let meutexto2 = document.getElementById("meutexto2").value;
+            alert(meutexto2);
+        }
+        function salvar(){
+            localStorage.setItem("meutexto",document.getElementById("meutexto").innerHTML);
+        }
+        function ler(){
+            alert(localStorage.getItem("meutexto"));
+        }
+    </script>
 
 
 </body>
